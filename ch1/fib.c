@@ -1,5 +1,6 @@
 /* 	fib.c
 	By Aseem Kohli
+	Exercise #5
 	This program outputs the first n fibonacci numbers.
 	For information on fibonacci numbers, see 
 	http://en.wikipedia.org/wiki/Fibonacci_number
