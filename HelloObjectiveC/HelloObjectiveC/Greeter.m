@@ -23,9 +23,35 @@
     [myGreetingText setGreetingText:newText];
 }
 
-- (void) issueGreeting
+- (NSString*) getVipText
 {
-    [myGreetingText issueGreeting];
+    return [myVipGreeting getGreetingText];
+}
+
+- (void) setVipGreeting: (NSString *) newText
+{
+    [myVipGreeting setGreetingText:newText];
+}
+
+- (void) addVipGreeting:(Greeting*) newGreeting;
+{
+    [newGreeting retain];
+    [myVipGreeting release];
+    myVipGreeting = newGreeting;
+}
+
+- (void) issueGreeting: (int) whichGreeting
+{
+    if (whichGreeting == 0)
+    {
+        [myGreetingText issueGreeting];
+        return;
+    }
+    
+    if (whichGreeting == 1)
+        [myVipGreeting issueGreeting];
+    else
+        NSLog(@"ERROR: invalid greeting parameter");
 }
 
 - (void) dealloc

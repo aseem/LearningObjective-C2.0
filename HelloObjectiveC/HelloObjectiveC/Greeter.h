@@ -12,10 +12,16 @@
 @interface Greeter : NSObject
 {
     Greeting* myGreetingText;
+    Greeting* myVipGreeting;
 }
 
 - (NSString*) getGreetingText;
 - (void) setGreetingText: (NSString*) newText;
-- (void) issueGreeting;
+
+- (NSString*) getVipGreeting;
+- (void) setVipGreeting: (NSString*) newText;
+- (void) addVipGreeting:(Greeting*) newGreeting;
+
+- (void) issueGreeting: (int) whichGreeting;
 
 @end
