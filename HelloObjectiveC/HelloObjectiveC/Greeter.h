@@ -22,6 +22,9 @@
 - (void) setVipGreeting: (NSString*) newText;
 - (void) addVipGreeting:(Greeting*) newGreeting;
 
+- (void) setGreetingText:(NSString *)newText
+                 vipText:(NSString *)vipText;
+
 - (void) issueGreeting: (int) whichGreeting;
 
 @end
